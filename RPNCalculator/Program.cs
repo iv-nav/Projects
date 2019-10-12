@@ -6,7 +6,12 @@ namespace RPNCalculator
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            while (true)
+            {
+                double result = RPN.Calculate(Console.ReadLine());
+                Console.WriteLine(result.ToString());
+            }
+
         }
     }
 }
