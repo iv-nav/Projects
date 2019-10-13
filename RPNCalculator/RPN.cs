@@ -47,6 +47,7 @@ namespace RPNCalculator
                         stack.Push(performResult);
                     i++;
                 }
+                    
             }
 
             if (stack.Count > 0)
@@ -68,6 +69,12 @@ namespace RPNCalculator
         static private double Perform(char operation, Stack<double> stack)
         {
             double result = Double.NaN;
+            if (stack.Count < 2)
+            {
+                Console.WriteLine("Input string is not standard.");
+                return result;
+            }            
+
             double a = stack.Pop();
 
             if (operation == '+')
